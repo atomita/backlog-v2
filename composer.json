@@ -1,0 +1,16 @@
+{
+	"name": "atomita/backlog-v2",
+	"description": "this is backlog api v2 library",
+	"keywords": ["backlog", "api", "v2"],
+	"license": "LGPLv3",
+	"authors": [
+		{
+			"name": "atomita"
+		}
+	],
+	"require": {
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
