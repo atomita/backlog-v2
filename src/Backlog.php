@@ -6,6 +6,7 @@ class Backlog
 {
 	const URL_TEMPLATE = 'https://%s.backlog.jp/api/v2/%s?%s';
 
+	protected $space;
 	protected $api = array();
 
 	function __construct($space_name, $api_key)
@@ -18,7 +19,7 @@ class Backlog
 	{
 		return $this->$api;
 	}
-	
+
 	function __get($api)
 	{
 		$that = clone $this;
@@ -36,7 +37,7 @@ class Backlog
 	{
 		return $this->request('GET', $data, $params, $option);
 	}
-	
+
 	function post(array $data = array(), array $params = array(), array $option = array())
 	{
 		return $this->request('POST', $data, $params, $option);
@@ -55,7 +56,7 @@ class Backlog
 				return is_int($k) ? $v : "$k: $v";
 			};
 		}
-		
+
 		$opt = array_merge(array(
 			'space_name' => $this->space,
 			'header' => array(),
@@ -76,10 +77,10 @@ class Backlog
 		switch ($http_method){
 			case 'POST':
 				$header  = array_merge(array(
-					'Content-Type' => 'application/x-www-form-urlencoded', // multipart/form-data, 
+					'Content-Type' => 'application/x-www-form-urlencoded', // multipart/form-data,
 				), $opt['header']);
 				break;
-			
+
 			case 'GET':
 				$header = array_merge(array(
 				), $opt['header']);
@@ -133,7 +134,7 @@ class Backlog
 			// error
 			throw new BacklogException('Not Found Content', 404);
 		}
-		
+
 		return $res;
 	}
 
