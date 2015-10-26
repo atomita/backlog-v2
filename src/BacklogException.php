@@ -14,7 +14,7 @@ class BacklogException extends \Exception
 
 	function getResponse()
 	{
-		$this->response;
+		return $this->response;
 	}
 
 }
