@@ -2,7 +2,7 @@
 	"name": "atomita/backlog-v2",
 	"description": "this is backlog api v2 library",
 	"keywords": ["backlog", "api", "v2"],
-	"license": "LGPLv3",
+	"license": "LGPL-3.0-only",
 	"authors": [
 		{
 			"name": "atomita"
