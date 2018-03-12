@@ -43,6 +43,11 @@ class Backlog
 		return $this->request('POST', $data, $params, $option);
 	}
 
+	function patch(array $data = array(), array $params = array(), array $option = array())
+	{
+		return $this->request('PATCH', $data, $params, $option);
+	}
+
 	function delete(array $data = array(), array $params = array(), array $option = array())
 	{
 		return $this->request('DELETE', $data, $params, $option);
@@ -76,6 +81,7 @@ class Backlog
 		$http_method = strtoupper($http_method);
 		switch ($http_method){
 			case 'POST':
+			case 'PATCH':
 				$header  = array_merge(array(
 					'Content-Type' => 'application/x-www-form-urlencoded', // multipart/form-data,
 				), $opt['header']);
