@@ -1,7 +1,7 @@
 Backlog-v2
 ==========
 
-this is [backlog api v2](http://developer.nulab-inc.com/ja/docs/backlog/api/2/) wrapper.
+this is [backlog api v2](https://developer.nulab.com/ja/docs/backlog/) wrapper with API Key.
 
 
 
